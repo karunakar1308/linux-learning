@@ -17,127 +17,101 @@
 | **Intermediate** | [07-shell-scripting](chapters/07-shell-scripting.md) | Variables, Loops, Functions, Debugging | Medium |
 | **Intermediate** | [08-package-management](chapters/08-package-management.md) | apt, yum, dnf, pacman, Snap, Flatpak | Medium |
 | **Intermediate** | [09-disk-management](chapters/09-disk-management.md) | Partitions, LVM, Filesystems, RAID | Medium-Hard |
-| **Advanced** | [10-security-permissions](chapters/10-security-permissions.md) | ACL, SELinux, AppArmor, Firewalls | Hard |
-| **Advanced** | [11-system-administration](chapters/11-system-administration.md) | Boot Process, Services, Logs, Backup | Hard |
-| **Advanced** | [12-containers-virtualization](chapters/12-containers-virtualization.md) | Docker, KVM, LXC, Namespaces | Hard |
-| **Practice** | [labs/practice-exercises.md](labs/practice-exercises.md) | Hands-on Labs & Exercises for All Topics | All Levels |
-| **Practice** | [labs/projects.md](labs/projects.md) | Real-world Projects & Scenarios | All Levels |
-| **Reference** | [reference/cheat-sheets.md](reference/cheat-sheets.md) | Quick Command Reference | All Levels |
-| **Reference** | [reference/glossary.md](reference/glossary.md) | Linux Terminology & Concepts | All Levels |
+| **Intermediate** | [10-permissions-ownership](chapters/10-permissions-ownership.md) | chmod, chown, umask, Special Bits | Medium |
+| **Advanced** | [11-security-basics](chapters/11-security-basics.md) | SSH Hardening, UFW, Fail2ban, Firewall-cmd | Hard |
+| **Advanced** | [12-system-logs-journalctl](chapters/12-system-logs-journalctl.md) | rsyslog, journald, Log Analysis | Hard |
+| **Advanced** | [13-boot-process-and-grub](chapters/13-boot-process-and-grub.md) | Boot Stages, GRUB2, init, systemd | Hard |
+| **Advanced** | [14-kernel-management](chapters/14-kernel-management.md) | Modules, Compiling, Upgrades, Tuning | Hard |
+| **Advanced** | [15-performance-tuning](chapters/15-performance-tuning.md) | CPU, Memory, Disk, Network Tuning | Hard |
+| **Advanced** | [16-automation-with-cron](chapters/16-automation-with-cron.md) | cron, crontab, at, systemd timers | Hard |
+| **Advanced** | [17-backup-and-recovery](chapters/17-backup-and-recovery.md) | rsync, tar, dd, Disaster Recovery | Hard |
+| **Advanced** | [18-advanced-security](chapters/18-advanced-security-selinux.md) | SELinux, AppArmor, Audit, Hardening | Hard |
 
 ---
 
-## Course Overview
+## Learning Path Breakdown
 
-This repository is designed as a self-paced learning path for anyone who wants to master Linux. Whether you're a developer, system administrator, DevOps engineer, or just starting out, this guide covers everything you need.
+### Beginner (Chapters 1-4)
+Start here if you are new to Linux. You will learn the fundamentals, how to navigate the file system, work with text editors, and manage users.
 
-### How to Use This Repo
+### Intermediate (Chapters 5-10)
+Build on your foundation with process management, networking, shell scripting, package management, and disk management.
 
-1. **Start from Chapter 1** if you're new to Linux
-2. **Use the table of contents** to jump to specific topics
-3. **Complete all hands-on labs** after each chapter
-4. **Build the projects** to reinforce learning
-5. **Reference cheat sheets** when you need quick reminders
-
-### Prerequisites
-
-- Basic computer literacy
-- A Linux environment (VM, WSL, or physical machine)
-- Terminal/command line access
-- Curiosity and patience!
+### Advanced (Chapters 11-18)
+Master Linux with deep dives into security, system logs, boot process, kernel management, performance tuning, automation, backup/recovery, and advanced security tools.
 
 ---
 
-## Recommended Distributions for Learning
+## How to Use This Repository
 
-| Distribution | Best For | Why |
-|-------------|----------|------|
-| **Ubuntu** | Beginners | Large community, great documentation |
-| **Debian** | Stability | Rock-solid, great for learning fundamentals |
-| **Fedora** | Cutting-edge | Latest features, good for developers |
-| **CentOS/Rocky** | Enterprise | Production-like environment |
-| **Arch** | Advanced users | Learn by doing, minimal base |
-| **Kali** | Security | Penetration testing & security learning |
+1. **Start from Chapter 01** - The chapters are sequenced for progressive learning.
+2. **Practice on a VM** - Use VirtualBox, VMware, or cloud instances to practice safely.
+3. **Follow the hands-on exercises** - Each chapter includes practical commands and labs.
+4. **Experiment** - Modify examples and see what breaks (in your VM!).
+5. **Build projects** - Combine concepts from multiple chapters into real-world tasks.
 
 ---
 
-## Setup Your Learning Environment
+## Recommended Tools for Learning
 
-### Option 1: Virtual Machine (Recommended for Beginners)
-```bash
-# Install VirtualBox
-sudo apt install virtualbox
-# Download Ubuntu ISO from ubuntu.com
-# Create a new VM and install Ubuntu
-```
-
-### Option 2: WSL2 (Windows Users)
-```powershell
-# In PowerShell as Admin
-wsl --install
-wsl --list --online
-wsl --install -d Ubuntu
-```
-
-### Option 3: Docker Container (Quick Start)
-```bash
-docker run -it ubuntu:latest bash
-```
-
----
-
-## Learning Path Recommendations
-
-### For Beginners (2-3 months)
-- Complete Chapters 1-4
-- Do all practice exercises
-- Build the "Personal File Server" project
-
-### For Intermediate Users (1-2 months)
-- Complete Chapters 5-9
-- Do all shell scripting exercises
-- Build the "Automated Backup System" project
-
-### For Advanced Users (1-2 months)
-- Complete Chapters 10-12
-- Build the "Containerized Web Server" project
-- Build the "System Monitoring Dashboard" project
-
----
-
-## Quick Start Commands
-
-| Task | Command |
+| Tool | Purpose |
 |------|--------|
-| List files | `ls -la` |
-| Create directory | `mkdir dirname` |
-| Create file | `touch filename` |
-| View file content | `cat filename` |
-| Edit file | `nano filename` or `vim filename` |
-| Copy file | `cp source dest` |
-| Move file | `mv source dest` |
-| Delete file | `rm filename` |
-| Find file | `find /path -name pattern` |
-| Check disk space | `df -h` |
-| Check memory | `free -h` |
-| List processes | `ps aux` |
-| Network info | `ip addr` or `ifconfig` |
-| Update packages | `sudo apt update && sudo apt upgrade` |
+| VirtualBox | Run Linux VMs on Windows/Mac |
+| Vagrant | Automate VM provisioning |
+| Docker | Container practice |
+| Ansible | Configuration management |
+| AWS/Azure Free Tier | Cloud-based Linux practice |
+| WSL2 | Linux on Windows 10/11 |
 
 ---
 
-## Contributing
+## Reference Materials
 
-Feel free to:
-- Report issues or suggest improvements
-- Add new chapters or exercises
-- Fix typos or improve explanations
-- Share your project solutions
+### Essential Books
 
-## Resources
+| Book | Author | Description |
+|------|--------|-------------|
+| The Linux Command Line | William Shotts | Free, comprehensive guide to bash |
+| How Linux Works | Brian Ward | Deep dive into Linux internals |
+| Linux Bible | Christopher Negus | Comprehensive Linux reference |
+| The Art of Unix Programming | Eric S. Raymond | Philosophy and best practices |
 
-- [Linux Documentation Project](https://tldp.org/)
-- [GNU Manuals](https://www.gnu.org/manual/manual.html)
-- [Explain Shell](https://explainshell.com/) - Understand commands
-- [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) - Learn Linux through a game
-- [Linux Journey](https://linuxjourney.com/) - Interactive tutorials
+### Online Resources
+
+| Resource | URL | Description |
+|----------|-----|-------------|
+| Linux man pages | man7.org | Official manual pages |
+| GNU Coreutils | gnu.org/software/coreutils | Essential Linux commands |
+| The Linux Documentation Project | tldp.org | Guides, HOWTOs, FAQs |
+| Arch Wiki | wiki.archlinux.org | Extensive Linux documentation |
+| Red Hat Documentation | docs.redhat.com | Enterprise Linux guides |
+
+### Practice Platforms
+
+| Platform | Description |
+|----------|-------------|
+| OverTheWire Bandit | Linux security wargame |
+| HackTheBox Academy | Linux fundamentals module |
+| TryHackMe | Pre-built Linux machines |
+| Linux Journey | Interactive learning |
+| EdX / Coursera | Structured Linux courses |
+
+---
+
+## About This Repository
+
+This repository is a living document and learning resource. Each chapter covers specific topics with:
+
+- **Concept explanations** - Understanding the "why" behind commands
+- **Command references** - Practical syntax and options
+- **Hands-on labs** - Step-by-step exercises
+- **Troubleshooting tips** - Common issues and solutions
+- **Best practices** - Industry-standard approaches
+
+## License
+
+This content is provided for educational purposes. Feel free to use, share, and contribute.
+
+---
+
+*Happy Learning!*
